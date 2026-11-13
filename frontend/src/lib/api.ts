@@ -12,8 +12,12 @@ import {
 } from "./validations";
 import { getMockAnalysis, getMockAnswer } from "./mockService";
 
-const API_BASE_URL =
+const rawBaseUrl =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "http://localhost:8000";
+const API_BASE_URL =
+  rawBaseUrl.startsWith("http://") || rawBaseUrl.startsWith("https://")
+    ? rawBaseUrl
+    : `https://${rawBaseUrl}`;
 
 const SESSION_KEY = "docsaathi_session_id";
 

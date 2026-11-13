@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Night Atmosphere -->
+    <linearGradient id="twilightSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B18" />
+      <stop offset="40%" stop-color="#0B1A3A" />
+      <stop offset="75%" stop-color="#14264E" />
+      <stop offset="100%" stop-color="#211B38" />
+    </linearGradient>
+
+    <!-- Imperial Sandstone & Gold Gradient -->
+    <linearGradient id="sandstoneGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="25%" stop-color="#FDE68A" />
+      <stop offset="65%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+
+    <!-- Deep Royal Navy Light Beam -->
+    <radialGradient id="chakraAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.55" />
+      <stop offset="40%" stop-color="#1D4ED8" stop-opacity="0.25" />
+      <stop offset="75%" stop-color="#1E3A8A" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="domeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#B45309" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters for 3D Glow & Depth -->
+    <filter id="royalGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="pillarShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="18" flood-color="#020617" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1920" height="1080" fill="url(#twilightSky)" />
+
+  <!-- Stars & Constellations in Upper Sky -->
+  <g opacity="0.65" fill="#E2E8F0">
+    <circle cx="210" cy="90" r="1.5" />
+    <circle cx="380" cy="140" r="1" />
+    <circle cx="520" cy="70" r="2" opacity="0.8" />
+    <circle cx="740" cy="110" r="1.5" />
+    <circle cx="1120" cy="85" r="1.5" />
+    <circle cx="1340" cy="120" r="2" opacity="0.9" />
+    <circle cx="1520" cy="65" r="1" />
+    <circle cx="1710" cy="130" r="1.8" />
+    <circle cx="960" cy="50" r="2.2" opacity="0.8" />
+  </g>
+
+  <!-- Ambient Golden & Navy Halos -->
+  <circle cx="960" cy="380" r="480" fill="url(#chakraAura)" />
+  <circle cx="960" cy="460" r="320" fill="url(#domeGlow)" filter="url(#royalGlow)" opacity="0.75" />
+
+  <!-- ============================================================== -->
+  <!-- 3D CENTRAL MONUMENT: RASHTRAPATI BHAVAN & PARLIAMENT DOME -->
+  <!-- ============================================================== -->
+  <g id="central-monument" filter="url(#pillarShadow)">
+    <!-- Monument Base Plinth (Sandstone) -->
+    <polygon points="340,780 1580,780 1680,890 240,890" fill="#1C1917" stroke="#D97706" stroke-width="1.5" opacity="0.9" />
+    <rect x="360" y="740" width="1200" height="40" fill="#292524" stroke="#F59E0B" stroke-width="1.2" opacity="0.95" />
+
+    <!-- Central Grand Dome -->
+    <!-- Copper/Sandstone Ribbed Dome -->
+    <path d="M820,490 C820,360 880,310 960,300 C1040,310 1100,360 1100,490 Z" fill="url(#sandstoneGold)" opacity="0.85" />
+    <!-- Dome Finial & Kalash -->
+    <path d="M956,300 L960,240 L964,300 Z" fill="#FEF08A" filter="url(#royalGlow)" />
+    <circle cx="960" cy="235" r="6" fill="#FDE047" />
+
+    <!-- Dome Ribs (3D depth curves) -->
+    <path d="M960,300 Q960,400 960,490" stroke="#78350F" stroke-width="3" fill="none" opacity="0.6" />
+    <path d="M960,300 Q920,390 890,490" stroke="#78350F" stroke-width="2.5" fill="none" opacity="0.5" />
+    <path d="M960,300 Q1000,390 1030,490" stroke="#78350F" stroke-width="2.5" fill="none" opacity="0.5" />
+    <path d="M960,300 Q870,410 840,490" stroke="#78350F" stroke-width="2" fill="none" opacity="0.4" />
+    <path d="M960,300 Q1050,410 1080,490" stroke="#78350F" stroke-width="2" fill="none" opacity="0.4" />
+
+    <!-- Drum Base with Classical Arched Windows -->
+    <rect x="800" y="490" width="320" height="70" fill="#1E293B" stroke="#F59E0B" stroke-width="2" />
+    <g fill="#FDE68A" opacity="0.85" filter="url(#royalGlow)">
+      <rect x="825" y="505" width="22" height="40" rx="11" />
+      <rect x="870" y="505" width="22" height="40" rx="11" />
+      <rect x="915" y="505" width="22" height="40" rx="11" />
+      <rect x="960" y="505" width="22" height="40" rx="11" />
+      <rect x="1005" y="505" width="22" height="40" rx="11" />
+      <rect x="1050" y="505" width="22" height="40" rx="11" />
+      <rect x="1095" y="505" width="22" height="40" rx="11" />
+    </g>
+
+    <!-- Classical Entablature & Pediment -->
+    <polygon points="760,560 1160,560 960,520" fill="url(#sandstoneGold)" stroke="#D97706" stroke-width="2" />
+    <rect x="420" y="560" width="1080" height="30" fill="#1C1917" stroke="#F59E0B" stroke-width="2" />
+
+    <!-- ============================================================ -->
+    <!-- GRAND COLONNADE: 14 MONUMENTAL ASHOKA / CORINTHIAN PILLARS -->
+    <!-- ============================================================ -->
+    <g id="colonnade-pillars" stroke="#F59E0B" stroke-width="1.2">
+      <!-- Repeating 3D Pillars with Capitals & Bases -->
+      <!-- Pillar 1 -->
+      <rect x="440" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="434" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="434" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 2 -->
+      <rect x="520" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="514" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="514" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 3 -->
+      <rect x="600" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="594" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="594" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 4 -->
+      <rect x="680" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="674" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="674" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 5 -->
+      <rect x="760" y="590" width="30" height="150" fill="url(#sandstoneGold)" />
+      <rect x="752" y="585" width="46" height="10" rx="2" fill="#FEF08A" />
+      <rect x="752" y="732" width="46" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 6 (Central Portico) -->
+      <rect x="850" y="590" width="32" height="150" fill="url(#sandstoneGold)" />
+      <rect x="842" y="585" width="48" height="10" rx="2" fill="#FEF08A" />
+      <rect x="842" y="732" width="48" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 7 (Central Portico) -->
+      <rect x="944" y="590" width="32" height="150" fill="url(#sandstoneGold)" />
+      <rect x="936" y="585" width="48" height="10" rx="2" fill="#FEF08A" />
+      <rect x="936" y="732" width="48" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 8 (Central Portico) -->
+      <rect x="1038" y="590" width="32" height="150" fill="url(#sandstoneGold)" />
+      <rect x="1030" y="585" width="48" height="10" rx="2" fill="#FEF08A" />
+      <rect x="1030" y="732" width="48" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 9 -->
+      <rect x="1130" y="590" width="30" height="150" fill="url(#sandstoneGold)" />
+      <rect x="1122" y="585" width="46" height="10" rx="2" fill="#FEF08A" />
+      <rect x="1122" y="732" width="46" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 10 -->
+      <rect x="1210" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="1204" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="1204" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 11 -->
+      <rect x="1290" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="1284" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="1284" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 12 -->
+      <rect x="1370" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="1364" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="1364" y="732" width="40" height="12" rx="2" fill="#78350F" />
+
+      <!-- Pillar 13 -->
+      <rect x="1450" y="590" width="28" height="150" fill="url(#sandstoneGold)" />
+      <rect x="1444" y="585" width="40" height="10" rx="2" fill="#FEF08A" />
+      <rect x="1444" y="732" width="40" height="12" rx="2" fill="#78350F" />
+    </g>
+
+    <!-- Warm Golden Light Shining From Inner Sanctum -->
+    <rect x="420" y="590" width="1080" height="142" fill="#020617" opacity="0.65" />
+    <g fill="#FDE68A" opacity="0.35" filter="url(#royalGlow)">
+      <circle cx="896" cy="660" r="45" />
+      <circle cx="1024" cy="660" r="45" />
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- SACRED 24-SPOKE DHARMA CHAKRA CELESTIAL PROJECTION (Upper Sky) -->
+  <!-- ============================================================== -->
+  <g transform="translate(960, 240)" filter="url(#royalGlow)" opacity="0.82">
+    <!-- Outer Rings -->
+    <circle cx="0" cy="0" r="145" fill="none" stroke="#60A5FA" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="138" fill="none" stroke="#FDE047" stroke-width="3" />
+    <circle cx="0" cy="0" r="128" fill="none" stroke="#3B82F6" stroke-width="1.8" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="32" fill="#0B1A3A" stroke="#FBBF24" stroke-width="3" />
+    <circle cx="0" cy="0" r="10" fill="#FEF08A" />
+
+    <!-- 24 Perfectly Spaced Sacred Spokes of Dharma Chakra -->
+    <g stroke="url(#sandstoneGold)" stroke-width="2.2" stroke-linecap="round">
+      <!-- 0, 90, 180, 270 deg -->
+      <line x1="0" y1="-32" x2="0" y2="-128" />
+      <line x1="0" y1="32" x2="0" y2="128" />
+      <line x1="-32" y1="0" x2="-128" y2="0" />
+      <line x1="32" y1="0" x2="128" y2="0" />
+
+      <!-- 15, 30, 45, 60, 75 deg -->
+      <line x1="8.3" y1="-30.9" x2="33.1" y2="-123.6" />
+      <line x1="16" y1="-27.7" x2="64" y2="-110.8" />
+      <line x1="22.6" y1="-22.6" x2="90.5" y2="-90.5" />
+      <line x1="27.7" y1="-16" x2="110.8" y2="-64" />
+      <line x1="30.9" y1="-8.3" x2="123.6" y2="-33.1" />
+
+      <!-- 105, 120, 135, 150, 165 deg -->
+      <line x1="30.9" y1="8.3" x2="123.6" y2="33.1" />
+      <line x1="27.7" y1="16" x2="110.8" y2="64" />
+      <line x1="22.6" y1="22.6" x2="90.5" y2="90.5" />
+      <line x1="16" y1="27.7" x2="64" y2="110.8" />
+      <line x1="8.3" y1="30.9" x2="33.1" y2="123.6" />
+
+      <!-- 195, 210, 225, 240, 255 deg -->
+      <line x1="-8.3" y1="30.9" x2="-33.1" y2="123.6" />
+      <line x1="-16" y1="27.7" x2="-64" y2="110.8" />
+      <line x1="-22.6" y1="22.6" x2="-90.5" y2="90.5" />
+      <line x1="-27.7" y1="16" x2="-110.8" y2="64" />
+      <line x1="-30.9" y1="8.3" x2="-123.6" y2="33.1" />
+
+      <!-- 285, 300, 315, 330, 345 deg -->
+      <line x1="-30.9" y1="-8.3" x2="-123.6" y2="-33.1" />
+      <line x1="-27.7" y1="-16" x2="-110.8" y2="-64" />
+      <line x1="-22.6" y1="-22.6" x2="-90.5" y2="-90.5" />
+      <line x1="-16" y1="-27.7" x2="-64" y2="-110.8" />
+      <line x1="-8.3" y1="-30.9" x2="-33.1" y2="-123.6" />
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- FOREGROUND REFLECTION POOL & KARTAVYA PATH PROMENADE -->
+  <!-- ============================================================== -->
+  <g id="reflection-pool">
+    <!-- Grand Water Basin -->
+    <polygon points="120,890 1800,890 1920,1080 0,1080" fill="#081020" />
+    
+    <!-- Water Ripple Lines reflecting the Colonnade & Gold Lighting -->
+    <g stroke="#38BDF8" stroke-width="1.5" opacity="0.35">
+      <line x1="300" y1="920" x2="1620" y2="920" stroke-dasharray="12 18" />
+      <line x1="200" y1="960" x2="1720" y2="960" stroke-dasharray="24 16" />
+      <line x1="100" y1="1010" x2="1820" y2="1010" stroke-dasharray="32 20" />
+      <line x1="40" y1="1055" x2="1880" y2="1055" stroke-dasharray="40 24" />
+    </g>
+
+    <!-- Golden Pillar Shimmers on Water -->
+    <g fill="#F59E0B" opacity="0.22" filter="url(#royalGlow)">
+      <ellipse cx="960" cy="940" rx="140" ry="25" />
+      <ellipse cx="640" cy="950" rx="90" ry="18" />
+      <ellipse cx="1280" cy="950" rx="90" ry="18" />
+      <ellipse cx="960" cy="1000" rx="260" ry="32" />
+    </g>
+  </g>
+
+  <!-- Side Stone Balustrades with Subtle Terracotta Urns -->
+  <g stroke="#78350F" stroke-width="2" fill="#1C1917">
+    <rect x="0" y="860" width="220" height="40" />
+    <circle cx="60" cy="840" r="14" fill="#D97706" />
+    <circle cx="160" cy="840" r="14" fill="#D97706" />
+
+    <rect x="1700" y="860" width="220" height="40" />
+    <circle cx="1760" cy="840" r="14" fill="#D97706" />
+    <circle cx="1860" cy="840" r="14" fill="#D97706" />
+  </g>
+</svg>

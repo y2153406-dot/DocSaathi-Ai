@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050A14" />
+      <stop offset="60%" stop-color="#091322" />
+      <stop offset="100%" stop-color="#14233C" />
+    </linearGradient>
+
+    <linearGradient id="goldGilded" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="25%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#EAB308" />
+      <stop offset="85%" stop-color="#B45309" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+
+    <radialGradient id="lanternLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.9" />
+      <stop offset="35%" stop-color="#F59E0B" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#D97706" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="fanoosGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="archShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="28" stdDeviation="22" flood-color="#020617" flood-opacity="0.85" />
+    </filter>
+  </defs>
+
+  <!-- Deep Night Sky -->
+  <rect width="1920" height="1080" fill="url(#nightSky)" />
+
+  <!-- Stars in the deep background -->
+  <g opacity="0.6">
+    <circle cx="280" cy="180" r="1.5" fill="#FFF" />
+    <circle cx="560" cy="120" r="1.2" fill="#FDE047" />
+    <circle cx="940" cy="90" r="2" fill="#FFF" />
+    <circle cx="1320" cy="160" r="1.5" fill="#FDE047" />
+    <circle cx="1680" cy="110" r="2" fill="#FFF" />
+    <circle cx="820" cy="220" r="1.2" fill="#FFF" />
+    <circle cx="1520" cy="260" r="1.8" fill="#FDE047" />
+  </g>
+
+  <!-- Crescent Moon -->
+  <path d="M1540 180 A60 60 0 1 0 1620 250 A50 50 0 1 1 1540 180 Z" fill="#FEF08A" opacity="0.75" filter="url(#fanoosGlow)" />
+
+  <!-- Receding 3D Colonnade Arches (Layer 3 - Deepest) -->
+  <g opacity="0.35" transform="translate(680, 220) scale(0.58)">
+    <path d="M120 700 V320 C120 180 280 80 480 30 C680 80 840 180 840 320 V700 Z" fill="#0D192C" stroke="url(#goldGilded)" stroke-width="4" />
+  </g>
+
+  <!-- Receding 3D Colonnade Arches (Layer 2 - Midground) -->
+  <g opacity="0.6" transform="translate(520, 160) scale(0.78)">
+    <path d="M120 750 V340 C120 200 240 140 340 110 C390 150 430 160 480 160 C530 160 570 150 620 110 C720 140 840 200 840 340 V750 Z" fill="#091424" stroke="url(#goldGilded)" stroke-width="5" />
+    <!-- Cusped Multifoil Details -->
+    <path d="M220 750 V380 C220 280 320 230 400 210 C440 230 460 235 480 235 C500 235 520 230 560 210 C640 230 740 280 740 380 V750 Z" fill="#060C16" stroke="#EAB308" stroke-width="2.5" />
+  </g>
+
+  <!-- Grand Monumental 3D Cusped Arch (Mehrab / Rumi Darwaza style) - Foreground -->
+  <g filter="url(#archShadow)">
+    <!-- Outer Arch Frame & Spandrels -->
+    <path d="M0 0 H1920 V1080 H1480 V520 C1480 320 1320 220 1200 170 C1120 220 1060 240 960 240 C860 240 800 220 720 170 C600 220 440 320 440 520 V1080 H0 Z" fill="#070E1A" />
+    
+    <!-- 3D Beveled Stone Arch Ring with Gilded Trim -->
+    <path d="M440 520 C440 320 600 220 720 170 C800 220 860 240 960 240 C1060 240 1120 220 1200 170 C1320 220 1480 320 1480 520 V1080 H1420 V520 C1420 360 1280 270 1180 230 C1100 270 1050 285 960 285 C870 285 820 270 740 230 C640 270 500 360 500 520 V1080 H440 Z" fill="url(#goldGilded)" />
+    
+    <!-- Intricate 3D Multi-foil Scallop Cusps -->
+    <path d="M500 520 C500 450 540 400 590 380 C610 410 650 415 670 385 C710 400 750 370 780 330 C820 350 860 350 890 320 C920 340 960 340 960 340 C960 340 1000 340 1030 320 C1060 350 1100 350 1140 330 C1170 370 1210 400 1250 385 C1270 415 1310 410 1330 380 C1380 400 1420 450 1420 520" fill="none" stroke="#FEF08A" stroke-width="3" opacity="0.8" />
+
+    <!-- Spandrel Floral Arabesque Relief Inlays -->
+    <g opacity="0.4" stroke="#F59E0B" stroke-width="2" fill="none">
+      <path d="M260 280 Q340 200 420 240 T500 320" />
+      <circle cx="340" cy="200" r="14" />
+      <circle cx="420" cy="240" r="8" />
+      <path d="M1660 280 Q1580 200 1500 240 T1420 320" />
+      <circle cx="1580" cy="200" r="14" />
+      <circle cx="1500" cy="240" r="8" />
+    </g>
+  </g>
+
+  <!-- Center Suspended 3D Brass Fanoos (Moroccan / Mughal Lantern) -->
+  <g transform="translate(960, 240)" filter="url(#archShadow)">
+    <!-- Hanging Brass Chain -->
+    <line x1="0" y1="0" x2="0" y2="180" stroke="#CA8A04" stroke-width="4" stroke-dasharray="10 5" />
+    
+    <!-- 3D Lantern Body -->
+    <g transform="translate(0, 180)">
+      <!-- Radial Glow Core -->
+      <circle cx="0" cy="80" r="180" fill="url(#lanternLight)" />
+      
+      <!-- Top Dome Cap -->
+      <path d="M-60 0 Q0 -50 60 0 L45 25 L-45 25 Z" fill="url(#goldGilded)" />
+      <circle cx="0" cy="-55" r="8" fill="#FDE047" filter="url(#fanoosGlow)" />
+      
+      <!-- Glass Polygonal Chamber -->
+      <polygon points="-45,25 45,25 70,80 50,140 -50,140 -70,80" fill="#FEF08A" opacity="0.4" />
+      <polygon points="-45,25 45,25 70,80 50,140 -50,140 -70,80" fill="none" stroke="url(#goldGilded)" stroke-width="3" />
+      
+      <!-- Inner Glowing Candle Flame -->
+      <ellipse cx="0" cy="80" rx="12" ry="24" fill="#FFF" filter="url(#fanoosGlow)" />
+      <ellipse cx="0" cy="80" rx="18" ry="32" fill="#F59E0B" opacity="0.8" filter="url(#fanoosGlow)" />
+      
+      <!-- Bottom Finial & Tassel Drop -->
+      <path d="M-50 140 L0 190 L50 140 Z" fill="url(#goldGilded)" />
+      <line x1="0" y1="190" x2="0" y2="230" stroke="#EAB308" stroke-width="3" />
+      <circle cx="0" cy="235" r="6" fill="#FDE047" />
+    </g>
+  </g>
+
+  <!-- Floating Gilded Calligraphy & Geometrical Arabesque Dust -->
+  <g filter="url(#fanoosGlow)" opacity="0.6">
+    <circle cx="680" cy="540" r="4" fill="#FDE047" />
+    <circle cx="1240" cy="520" r="5" fill="#FEF08A" />
+    <circle cx="820" cy="680" r="3.5" fill="#F59E0B" />
+    <circle cx="1110" cy="650" r="4.5" fill="#FDE047" />
+    <circle cx="750" cy="380" r="3" fill="#FFF" />
+    <circle cx="1180" cy="360" r="3" fill="#FFF" />
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-bg: #FAF9F5; /* Warm Ivory */
+  --theme-bg-start: #FAF9F5;
+  --theme-bg-end: #F4F0E8;
+  --theme-surface: #FFFFFF;
+  --theme-surface-glass: rgba(255, 255, 255, 0.88);
+  --theme-surface-glass-active: rgba(255, 255, 255, 0.96);
+  --theme-border: rgba(226, 220, 209, 0.8);
+  --theme-border-glow: rgba(59, 91, 219, 0.22);
+  --theme-primary: #3B5BDB;
+  --theme-primary-hover: #2B44B4;
+  --theme-secondary: #0CA678;
+  --theme-accent: #E8590C;
+  --theme-accent-soft: rgba(59, 91, 219, 0.08);
+  --theme-text: #1E293B;
+  --theme-text-muted: #64748B;
+  --theme-text-inverse: #FFFFFF;
+  --font-primary: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: Outfit, Inter, sans-serif;
+  --theme-radius: 1rem;
+}
+
+/* RTL Support for Urdu and Kashmiri */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .ltr-only {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Smooth Scrolling & Light Theme Typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(145deg, var(--theme-bg-start) 0%, var(--theme-bg-end) 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Elegant light custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--theme-primary);
+  color: var(--theme-text-inverse);
+}

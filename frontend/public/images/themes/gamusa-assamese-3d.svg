@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0709" />
+      <stop offset="40%" stop-color="#1A0D12" />
+      <stop offset="100%" stop-color="#2D111A" />
+    </linearGradient>
+
+    <radialGradient id="sunGlow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FF4D6D" stop-opacity="0.45" />
+      <stop offset="50%" stop-color="#E11D48" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="brassGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FDE047" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#EAB308" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#CA8A04" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#713F12" stop-opacity="0.9" />
+    </radialGradient>
+
+    <filter id="glow3d" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+  <circle cx="1350" cy="350" r="600" fill="url(#sunGlow)" />
+
+  <!-- Distant Tea Hills & Brahmaputra Mist Layers in 3D Depth -->
+  <path d="M0 720 Q480 620 960 680 T1920 620 L1920 1080 L0 1080 Z" fill="#1C0A10" opacity="0.6" />
+  <path d="M0 780 Q400 700 850 740 T1920 710 L1920 1080 L0 1080 Z" fill="#15080D" opacity="0.8" />
+  <path d="M0 860 Q550 790 1100 840 T1920 820 L1920 1080 L0 1080 Z" fill="#0D0407" />
+
+  <!-- 3D Rhino Silhouette in Mist -->
+  <g transform="translate(260, 720) scale(0.65)" opacity="0.45" filter="url(#softShadow)">
+    <path d="M50 120 C70 90 120 70 180 80 C230 70 280 90 320 110 C350 95 380 90 410 110 C440 90 470 95 490 120 C520 130 540 160 540 200 C540 240 510 260 480 270 L480 340 L440 340 L440 280 L380 280 L370 340 L330 340 L340 270 L240 270 L230 340 L190 340 L200 270 L140 270 L130 340 L90 340 L100 240 C70 220 50 170 50 120 Z" fill="#E11D48" />
+    <path d="M490 120 Q530 60 550 40 Q530 80 520 110 Z" fill="#FDA4AF" />
+  </g>
+
+  <!-- 3D Floating Jaapi (Conical Woven Assamese Sunhat) with perspective tilt -->
+  <g transform="translate(1180, 260) rotate(-14)" filter="url(#softShadow)">
+    <!-- Base 3D Cone Ellipse Layers -->
+    <ellipse cx="260" cy="280" rx="260" ry="130" fill="#713F12" opacity="0.5" />
+    <ellipse cx="260" cy="270" rx="250" ry="120" fill="#FDE047" opacity="0.15" />
+    <!-- Cone Body -->
+    <path d="M10 270 Q260 -40 510 270 Q260 390 10 270 Z" fill="#2E1018" stroke="#E11D48" stroke-width="3" />
+    <!-- 3D Woven Radial Ribs -->
+    <path d="M260 40 L10 270 M260 40 L80 300 M260 40 L160 330 M260 40 L260 350 M260 40 L360 330 M260 40 L440 300 M260 40 L510 270" stroke="#FDE047" stroke-width="2.5" opacity="0.75" />
+    <!-- Traditional Crimson Red Felt Diamond (Phool) Accents -->
+    <polygon points="260,110 290,150 260,190 230,150" fill="#E11D48" filter="url(#glow3d)" />
+    <polygon points="170,170 195,200 170,230 145,200" fill="#E11D48" />
+    <polygon points="350,170 375,200 350,230 325,200" fill="#E11D48" />
+    <polygon points="260,220 285,255 260,290 235,255" fill="#E11D48" />
+    <circle cx="260" cy="40" r="14" fill="#FDE047" filter="url(#glow3d)" />
+  </g>
+
+  <!-- 3D Traditional Brass Xorai Offering Vessel -->
+  <g transform="translate(760, 480)" filter="url(#softShadow)">
+    <!-- Xorai Base Plate (3D tiered pedestal) -->
+    <ellipse cx="200" cy="420" rx="140" ry="32" fill="url(#brassGlow)" />
+    <path d="M140 420 Q200 380 260 420 L240 330 Q200 345 160 330 Z" fill="#854D0E" />
+    <!-- Slender Fluted Stem -->
+    <path d="M185 330 L185 240 L215 240 L215 330 Z" fill="url(#brassGlow)" />
+    <!-- Xorai Offering Bowl -->
+    <path d="M70 240 Q200 290 330 240 Q350 180 320 150 Q200 190 80 150 Q50 180 70 240 Z" fill="url(#brassGlow)" />
+    <!-- Xorai Conical Lid with Finial -->
+    <path d="M90 150 Q200 30 310 150 Q200 175 90 150 Z" fill="#A16207" stroke="#FEF08A" stroke-width="2" />
+    <path d="M190 30 L200 -20 L210 30 Z" fill="#FDE047" filter="url(#glow3d)" />
+    <circle cx="200" cy="-25" r="7" fill="#FFF" />
+  </g>
+
+  <!-- Floating 3D Silk Gamusa Fabric Ribbons with Red Woven Motifs -->
+  <g filter="url(#softShadow)" opacity="0.85">
+    <path d="M-60 380 C320 260 620 540 1050 390 C1380 270 1620 420 1980 340" fill="none" stroke="#FFF1F2" stroke-width="48" stroke-linecap="round" opacity="0.2" />
+    <path d="M-60 380 C320 260 620 540 1050 390 C1380 270 1620 420 1980 340" fill="none" stroke="#E11D48" stroke-width="12" stroke-dasharray="24 16" stroke-linecap="round" opacity="0.65" />
+    <path d="M-40 480 C360 360 700 620 1150 490 C1460 390 1720 540 2000 440" fill="none" stroke="#FFF1F2" stroke-width="28" stroke-linecap="round" opacity="0.25" />
+    <path d="M-40 480 C360 360 700 620 1150 490 C1460 390 1720 540 2000 440" fill="none" stroke="#E11D48" stroke-width="8" stroke-dasharray="16 12" stroke-linecap="round" opacity="0.7" />
+  </g>
+
+  <!-- Glowing atmospheric floating particles -->
+  <g filter="url(#glow3d)" opacity="0.6">
+    <circle cx="340" cy="280" r="4" fill="#FDA4AF" />
+    <circle cx="680" cy="340" r="5" fill="#FDE047" />
+    <circle cx="1120" cy="180" r="6" fill="#FDA4AF" />
+    <circle cx="1520" cy="290" r="4.5" fill="#FDE047" />
+    <circle cx="940" cy="620" r="3.5" fill="#FDA4AF" />
+    <circle cx="1680" cy="510" r="5" fill="#FDE047" />
+  </g>
+</svg>
